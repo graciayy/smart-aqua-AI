@@ -1,0 +1,11 @@
+Options -Indexes
+DirectoryIndex index.html
+
+# (Opsional) paksa HTTPS — hapus tanda # di 3 baris bawah bila SSL sudah aktif
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html application/json text/css application/javascript
+</IfModule>
